@@ -1,6 +1,5 @@
 package zona_fit;
 
-
 import zona_fit.datos.ClienteDAO;
 import zona_fit.datos.IClienteDAO;
 import zona_fit.dominio.Cliente;
@@ -13,5 +12,4 @@ public class Main {
         var clienteMod = new Cliente(38);
         cliente.eliminarCliente(clienteMod);
     }
-
 }
