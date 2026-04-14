@@ -28,7 +28,7 @@ public class ZonaFitApp {
 
     private static int mostrarMenu(Scanner consola){
         System.out.println("""
-                            -------------\s 
+                            ----------------------\s 
                             """);
         System.out.println(
                 """
@@ -122,6 +122,13 @@ public class ZonaFitApp {
                 var cliente = new Cliente(id);
                 var Eliminado = clienteDAO.eliminarCliente(cliente);
             }
+
+            case 6 -> {
+                System.out.println("------Hasta Pronto------");
+                return salir = true;
+            }
+
+            default -> System.out.println("La opción no pudo ser reconocida" + opcion);
         }
 
         return salir;
