@@ -63,7 +63,7 @@ public class ClienteDAO implements IClienteDAO {
             ps.setString(2, cliente.getApellido());
             ps.setInt(3, cliente.getMembresia());
             ps.execute();
-            System.out.println("Cliente agregado " + cliente);
+            System.out.println("Cliente agregado");
             return true;
         }catch(Exception e){
             System.out.println("Error en encontrar el usuario: " + e.getMessage());
@@ -82,7 +82,7 @@ public class ClienteDAO implements IClienteDAO {
             ps.setInt(3, cliente.getMembresia());
             int filas = ps.executeUpdate();
             if(filas > 0){
-                System.out.println("Cliente modificado por" + cliente);
+                System.out.println(cliente + " se encuentra modificado" );
                 return true;
             } else {
                 System.out.println("Cliente no encontrado");
